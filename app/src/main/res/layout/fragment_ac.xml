@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background"
+    tools:context=".acFragment"
+    android:padding="14dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="#17181C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/go_to_acfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A/C is on"
+                android:textColor="@color/text_white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxWidth="250dp"
+                android:text="Currently 27C"
+                android:textColor="@color/text_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxWidth="250dp"
+                android:text="Will change in 2 min"
+                android:textColor="@color/text_gray"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <soup.neumorphism.NeumorphImageView
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_go_to_second_activity"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_onoff"
+                app:neumorph_backgroundColor="@color/blue_light"
+                app:neumorph_shadowColorDark="@color/blue_shadow_1"
+                app:neumorph_shadowColorLight="@color/blue_shadow_2"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_shapeAppearance="@style/neuButton" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:src="@drawable/img_cooling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go_to_acfragment" />
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode"
+        android:textColor="@color/text_white"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/btn_auto"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_dry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:neumorph_backgroundColor="@color/new_background"
+        app:neumorph_shadowColorDark="@color/new_shadow1"
+        app:neumorph_shadowColorLight="@color/new_shadow2"
+        app:neumorph_shapeAppearance="@style/neuButton"
+        app:neumorph_shapeType="flat" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/btn_dry"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:elevation="4dp"
+        android:padding="24dp"
+        android:src="@drawable/ic_dry"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cool"
+        app:layout_constraintStart_toEndOf="@+id/btn_auto"
+        app:layout_constraintTop_toTopOf="@+id/btn_auto"
+        app:neumorph_backgroundColor="@color/new_background"
+        app:neumorph_shadowColorDark="@color/new_shadow1"
+        app:neumorph_shadowColorLight="@color/new_shadow2"
+        app:neumorph_shapeAppearance="@style/neuButton"
+        app:neumorph_shapeType="flat" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/btn_cool"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:elevation="4dp"
+        android:padding="24dp"
+        android:src="@drawable/ic_cool"
+        app:layout_constraintEnd_toStartOf="@+id/btn_program"
+        app:layout_constraintStart_toEndOf="@+id/btn_dry"
+        app:layout_constraintTop_toTopOf="@+id/btn_dry"
+        app:neumorph_backgroundColor="@color/new_background"
+        app:neumorph_shadowColorDark="@color/new_shadow1"
+        app:neumorph_shadowColorLight="@color/new_shadow2"
+        app:neumorph_shapeAppearance="@style/neuButton"
+        app:neumorph_shapeType="flat" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btn_program"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:elevation="4dp"
+        android:padding="24dp"
+        android:src="@drawable/ic_program"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_cool"
+        app:layout_constraintTop_toTopOf="@+id/btn_cool"
+        app:neumorph_backgroundColor="@color/new_background"
+        app:neumorph_shadowColorDark="@color/new_shadow1"
+        app:neumorph_shadowColorLight="@color/new_shadow2"
+        app:neumorph_shapeAppearance="@style/neuButton"
+        app:neumorph_shapeType="flat" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_auto"
+        app:layout_constraintEnd_toEndOf="@+id/btn_auto"
+        app:layout_constraintStart_toStartOf="@+id/btn_auto"
+        />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dry"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_dry"
+        app:layout_constraintEnd_toEndOf="@+id/btn_dry"
+        app:layout_constraintStart_toStartOf="@+id/btn_dry"
+       />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cool"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cool"
+        app:layout_constraintEnd_toEndOf="@+id/btn_cool"
+        app:layout_constraintStart_toStartOf="@+id/btn_cool"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="program"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_program"
+        app:layout_constraintEnd_toEndOf="@+id/btn_program"
+        app:layout_constraintStart_toStartOf="@+id/btn_program"
+/>
+</androidx.constraintlayout.widget.ConstraintLayout>
